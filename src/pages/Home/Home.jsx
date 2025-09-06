@@ -25,6 +25,12 @@ import {
   CiUser,
 } from 'react-icons/ci';
 import { LuHandHeart } from 'react-icons/lu';
+import {
+  Atendimento,
+  Care,
+  Cumprimentos,
+  Situations,
+} from '../../assets/Videos';
 export default function Home() {
   const theme = useTheme();
   const postsData = [
@@ -33,7 +39,7 @@ export default function Home() {
       title: 'Cumprimentos e Interações Básicas',
       description:
         'Aprenda a iniciar conversas em Libras e expressões de gentileza usadas no dia a dia.',
-      videoLink: 'youtube.com',
+      videoLink: Cumprimentos,
       backgroundColor: theme.colors.lightBlue,
       icon: CiUser,
     },
@@ -42,7 +48,7 @@ export default function Home() {
       title: 'Atendimento Geral',
       description:
         'Descubra sinais práticos para situações comuns de atendimento em diferentes contextos.',
-      videoLink: 'youtube.com',
+      videoLink: Atendimento,
       backgroundColor: theme.colors.welcomeGirl,
       icon: CiStethoscope,
     },
@@ -51,7 +57,7 @@ export default function Home() {
       title: 'Cuidados com a Saúde',
       description:
         'Veja como falar sobre bem-estar, consultas e orientações simples relacionadas à saúde em Libras.',
-      videoLink: 'youtube.com',
+      videoLink: Care,
       backgroundColor: theme.colors.yellowGirl,
       icon: CiHeart,
     },
@@ -69,7 +75,7 @@ export default function Home() {
       title: 'Situações e Sintomas ',
       description:
         'Aprenda a expressar desconfortos e sintomas  para facilitar o diálogo entre paciente e profissional de saúde.',
-      videoLink: 'youtube.com',
+      videoLink: Situations,
       backgroundColor: theme.colors.orange,
       icon: CiMedicalMask,
     },

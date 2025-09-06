@@ -3,10 +3,19 @@ import { useTheme } from 'styled-components';
 import { Card, IconWrapper, Separator, Text, Title } from './Styles';
 import { Button } from '../../common';
 import { FaPersonWalkingDashedLineArrowRight } from 'react-icons/fa6';
+import { useNavigate } from 'react-router-dom';
 
 export default function CardComponent({ data }) {
+  const navigate = useNavigate();
   return (
-    <Card backgroundcolor={data?.backgroundColor}>
+    <Card
+      onClick={() =>
+        navigate('/video', {
+          state: { video: data?.videoLink }, // passa o vídeo
+        })
+      }
+      backgroundcolor={data?.backgroundColor}
+    >
       <div>
         <Title>{data?.title}</Title>
         <Separator />

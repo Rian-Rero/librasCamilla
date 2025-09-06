@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom';
 
 import { AppLayout } from './layouts';
-import { Home, Login, NotFound } from './pages';
+import { Home, Login, NotFound, Video } from './pages';
 
 // For the routes that need the user to be logged in
 function PrivateRoutes() {
@@ -22,12 +22,12 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       <Route path="/" element={<AppLayout />}>
-        <Route element={<PrivateRoutes />}>
-          <Route index element={<Home />} />
-        </Route>
-        <Route path="login" element={<Login />} />
-        <Route path="*" element={<NotFound />} />
+        <Route index element={<Home />} />{' '}
+        <Route path="video" element={<Video />} />
       </Route>
+      <Route path="login" element={<Login />} />
+
+      <Route path="*" element={<NotFound />} />
     </Route>,
   ),
 );

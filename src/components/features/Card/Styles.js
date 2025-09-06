@@ -23,6 +23,10 @@ export const Card = styled.div`
   );
 
   border: none;
+  @media (max-width: 500px) {
+    width: 36rem;
+    height: 36rem;
+  }
 `;
 
 export const Title = styled.h2`
