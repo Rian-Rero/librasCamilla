@@ -54,7 +54,7 @@ export default function Home() {
     },
     {
       id: 3,
-      title: 'Cuidados com a Saúde',
+      title: 'Enfermagem e Cuidados',
       description:
         'Veja como falar sobre bem-estar, consultas e orientações simples relacionadas à saúde em Libras.',
       videoLink: Care,
@@ -67,7 +67,7 @@ export default function Home() {
       description:
         'Conheça sinais que ajudam a explicar exames, consultas médicas e procedimentos hospitalares.',
       videoLink: 'youtube.com',
-      backgroundColor: theme.colors.purple,
+      backgroundColor: theme.colors.orange,
       icon: CiMedicalClipboard,
     },
     {
@@ -76,7 +76,7 @@ export default function Home() {
       description:
         'Aprenda a expressar desconfortos e sintomas  para facilitar o diálogo entre paciente e profissional de saúde.',
       videoLink: Situations,
-      backgroundColor: theme.colors.orange,
+      backgroundColor: theme.colors.purple,
       icon: CiMedicalMask,
     },
   ];
