@@ -8,46 +8,41 @@ export const MainContainer = styled.div`
   margin: 0 auto;
 `;
 
+/* Caixa verde superior */
 export const WelcomeSection = styled.div`
-  background-color: ${({ theme }) => theme.colors.welcomeGirl}; // Azul-claro
-  --r: 40px; /* radius */
+  background-color: ${({ theme }) => theme.colors.welcomeGirl};
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 3rem;
   font-family: ${({ theme }) => theme.fonts.cooper};
   text-align: center;
+
+  /* Recorte no canto superior direito */
+  clip-path: polygon(0 0, calc(100% - 2rem) 0, 100% 2rem, 100% 100%, 0 100%);
+  border-radius: 1rem;
+`;
+
+export const ContentSection = styled.img`
+  width: 100%;
+  height: 100%;
+`;
+
+/* Caixa amarela com imagem */
+export const ImageBox = styled.div`
+  background-color: ${({ theme }) => theme.colors.yellowGirl};
+  padding: 10px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
-  width: 100%;
-  height: 20rem;
-  border-radius: 0rem;
-  padding-bottom: 2rem;
-  border-top-right-radius: var(--r);
-  mask:
-    radial-gradient(var(--r) at 10rem 100%, #0000 100%, #000 calc(100% + 1px))
-      100% 100% / var(--r) var(--r) no-repeat,
-    linear-gradient(0, #0000 var(--r), #000 0);
-`;
-
-export const ContentSection = styled.div`
-  display: grid;
-  grid-template-columns: 0.5fr 1fr; /* Colunas para imagem e caixas direitas */
-  gap: 1rem; // Fonte ajustada p
-  align-items: stretch;
-  width: 100%;
-`;
-
-export const ImageBox = styled.div`
-  background-color: ${({ theme }) => theme.colors.yellowGirl}; // Amarelo
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  overflow: hidden; /* Garante que a imagem dentro não "vaze" do clip-path */
-  border-radius: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
 
   > img {
-    height: 100%;
     width: 100%;
+    height: auto;
   }
 `;
 
@@ -56,40 +51,46 @@ export const RightBoxesContainer = styled.div`
   flex-direction: column;
   gap: 1rem;
 `;
+
 export const Line = styled.div`
   display: flex;
-  height: 100%;
   gap: 1rem;
   width: 100%;
-  text-align: center;
-  justify-content: center;
-  font-size: 5rem;
 `;
 
+/* Roxo com recorte na direita */
 export const PurpleBox = styled.div`
-  background-color: ${({ theme }) => theme.colors.purple}; // Azul-claro
-  padding: 20px;
+  background-color: ${({ theme }) => theme.colors.purple};
   flex: 1;
-  overflow: hidden;
-  border-radius: 2rem 0rem 2rem 2rem;
-  clip-path: polygon(0 0, calc(90% - 3rem) 0, 100% 20%, 100% 100%, 0 100%);
+  height: 5rem;
+  border-radius: 1rem;
+
+  /* recorte diagonal na ponta direita */
+  clip-path: polygon(
+    0 0,
+    calc(100% - 1.5rem) 0,
+    100% 1.5rem,
+    100% 100%,
+    0 100%
+  );
 `;
 
+/* Caixa azul pequena */
 export const LightBlueBox = styled.div`
-  background-color: ${({ theme }) => theme.colors.lightBlue}; // Azul-claro
-  padding: 20px;
-  flex: 0.5;
-  overflow: hidden;
-  border-radius: 2rem;
+  background-color: ${({ theme }) => theme.colors.lightBlue};
+  flex: 0.4;
+  height: 5rem;
+  border-radius: 1rem;
 `;
 
+/* Caixa laranja */
 export const OrangeBox = styled.div`
-  background-color: ${({ theme }) => theme.colors.orange}; // Azul-claro
-  padding: 20px;
-  overflow: hidden;
+  background-color: ${({ theme }) => theme.colors.orange};
   width: 100%;
-  border-radius: 2rem;
+  height: 4rem;
+  border-radius: 1rem;
 `;
+
 export const CardsBox = styled.div`
   display: flex;
   justify-content: center;

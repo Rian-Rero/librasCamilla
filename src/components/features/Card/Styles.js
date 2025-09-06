@@ -4,9 +4,9 @@ const CHAMFER = '4rem';
 
 export const Card = styled.div`
   background-color: ${(props) => props.backgroundcolor};
-  width: 360px;
-  height: 360px;
-  padding: 28px;
+  width: 36rem;
+  height: 36rem;
+  padding: 2.8rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;

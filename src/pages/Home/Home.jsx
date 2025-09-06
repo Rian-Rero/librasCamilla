@@ -14,7 +14,7 @@ import {
   WelcomeSection,
 } from './Styles';
 import { CardComponent, SearchInput } from '../../components/features';
-import { MeninaLibras } from '../../assets';
+import { BackGround, MeninaLibras } from '../../assets';
 import { useTheme } from 'styled-components';
 import { IoPeopleOutline } from 'react-icons/io5';
 import {
@@ -25,7 +25,6 @@ import {
   CiUser,
 } from 'react-icons/ci';
 import { LuHandHeart } from 'react-icons/lu';
-
 export default function Home() {
   const theme = useTheme();
   const postsData = [
@@ -77,24 +76,9 @@ export default function Home() {
   ];
   return (
     <MainContainer>
-      <WelcomeSection>Bem-vindos ao portal de libras!</WelcomeSection>
+      {/* <WelcomeSection>Bem-vindos ao portal de libras!</WelcomeSection> */}
 
-      <ContentSection>
-        <ImageBox>
-          {/* Aqui você pode adicionar o componente da imagem */}
-          <img src={MeninaLibras} alt="Pessoa fazendo sinal em libras" />
-        </ImageBox>
-
-        <RightBoxesContainer>
-          <Line>
-            <PurpleBox />
-            <LightBlueBox />
-          </Line>
-          <Line>
-            <OrangeBox />
-          </Line>
-        </RightBoxesContainer>
-      </ContentSection>
+      <ContentSection src={BackGround}></ContentSection>
       <TextLine>Aumente suas habilidades em Libras</TextLine>
       <CardsBox>
         {postsData?.map((posts) => (
