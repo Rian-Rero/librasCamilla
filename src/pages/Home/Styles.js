@@ -3,20 +3,24 @@ import styled from 'styled-components';
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 20px;
+  gap: 1rem;
+  padding: 1rem;
   margin: 0 auto;
 `;
 
 export const WelcomeSection = styled.div`
   background-color: ${({ theme }) => theme.colors.welcomeGirl}; // Azul-claro
   --r: 40px; /* radius */
-  font-size: 5rem;
+  font-size: 3rem;
   font-family: ${({ theme }) => theme.fonts.cooper};
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   width: 100%;
-  height: 90rem;
+  height: 20rem;
   border-radius: 0rem;
+  padding-bottom: 2rem;
   border-top-right-radius: var(--r);
   mask:
     radial-gradient(var(--r) at 10rem 100%, #0000 100%, #000 calc(100% + 1px))
@@ -26,9 +30,10 @@ export const WelcomeSection = styled.div`
 
 export const ContentSection = styled.div`
   display: grid;
-  grid-template-columns: 1fr 2fr; /* Colunas para imagem e caixas direitas */
-  gap: 20px; // Fonte ajustada p
+  grid-template-columns: 0.5fr 1fr; /* Colunas para imagem e caixas direitas */
+  gap: 1rem; // Fonte ajustada p
   align-items: stretch;
+  width: 100%;
 `;
 
 export const ImageBox = styled.div`
@@ -38,7 +43,8 @@ export const ImageBox = styled.div`
   justify-content: center;
   align-items: flex-end;
   overflow: hidden; /* Garante que a imagem dentro não "vaze" do clip-path */
-  border-radius: 3.6rem;
+  border-radius: 2rem;
+
   > img {
     height: 100%;
     width: 100%;
@@ -48,12 +54,12 @@ export const ImageBox = styled.div`
 export const RightBoxesContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1rem;
 `;
 export const Line = styled.div`
   display: flex;
   height: 100%;
-  gap: 2rem;
+  gap: 1rem;
   width: 100%;
   text-align: center;
   justify-content: center;
@@ -74,7 +80,7 @@ export const LightBlueBox = styled.div`
   padding: 20px;
   flex: 0.5;
   overflow: hidden;
-  border-radius: 3.1rem;
+  border-radius: 2rem;
 `;
 
 export const OrangeBox = styled.div`
@@ -82,7 +88,7 @@ export const OrangeBox = styled.div`
   padding: 20px;
   overflow: hidden;
   width: 100%;
-  border-radius: 3.1rem;
+  border-radius: 2rem;
 `;
 export const CardsBox = styled.div`
   display: flex;
@@ -97,5 +103,7 @@ export const TextLine = styled.div`
   width: 100%;
   text-align: center;
   justify-content: center;
-  font-size: 5rem;
+  font-size: 3rem;
+  font-weight: 900;
+  font-family: ${({ theme }) => theme.fonts.cooper};
 `;

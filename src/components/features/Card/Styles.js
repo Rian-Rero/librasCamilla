@@ -23,7 +23,6 @@ export const Card = styled.div`
   );
 
   border: none;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
 `;
 
 export const Title = styled.h2`
