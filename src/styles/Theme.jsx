@@ -17,10 +17,17 @@ const theme = {
     warningRed: '#af0c0c',
     backgroundGrey: '#d2cece',
     blueFlux: '#104c84',
+    yellowGirl: '#fed532',
+    welcomeGirl: '#99ebd2',
+    orange: '#f26e26',
+    lightBlue: '#99daff',
+    purple: '#d9b8f3',
   },
 
   fonts: {
     artnoova: 'Artnoova, sans-serif',
+    cooper: 'Cooper BT, sans-serif',
+    inter: '"Inter", sans-serif',
   },
 };
 

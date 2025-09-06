@@ -1,31 +1,49 @@
 import styled from 'styled-components';
 
+const CHAMFER = '4rem';
+
 export const Card = styled.div`
+  background-color: ${(props) => props.backgroundcolor};
+  width: 360px;
+  height: 360px;
+  padding: 28px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  border-radius: 0.4rem;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-  padding: 1.6rem;
-  width: 100%;
-  max-width: 30rem;
-  transition: box-shadow 0.2s;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  &:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  }
+  justify-content: space-between;
+  border-radius: 3rem;
+  /* recorte no canto superior direito e no canto inferior esquerdo */
+  clip-path: polygon(
+    0 0,
+    calc(100% - ${CHAMFER}) 0,
+    100% ${CHAMFER},
+    100% 100%,
+    ${CHAMFER} 100%,
+    0 calc(100% - ${CHAMFER})
+  );
+
+  border: none;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
 `;
 
-export const Title = styled.h1`
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: ${(props) => props.theme.colors.font.black};
+export const Title = styled.h2`
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: ${({ theme }) => theme.fonts.cooper};
 `;
 
-export const Line = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+export const Separator = styled.hr`
+  border: none;
+  border-top: 2px solid black;
+  margin: 8px 0;
+`;
+
+export const Text = styled.p`
+  font-size: 1.8rem;
+  font-family: ${({ theme }) => theme.fonts.inter};
+`;
+
+export const IconWrapper = styled.div`
+  align-self: flex-end;
+  font-size: 6rem;
 `;
