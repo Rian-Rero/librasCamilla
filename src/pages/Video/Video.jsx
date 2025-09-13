@@ -17,7 +17,7 @@ export default function Video() {
           playing
           controls
           width="100%"
-          height="100vh"
+          height="90vh"
           style={{ borderRadius: '12px' }}
         />
       ) : (
