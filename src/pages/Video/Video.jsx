@@ -7,6 +7,9 @@ import { useTheme } from 'styled-components';
 export default function Video() {
   const location = useLocation();
   const videoUrl = location.state?.video; // pega o vídeo passado no state
+  const backColor = location.state?.backgroundColor; // pega o vídeo passado no state
+  console.log('✌️backColor --->', backColor);
+
   const navigate = useNavigate();
   const theme = useTheme();
   return (
@@ -17,18 +20,21 @@ export default function Video() {
           playing
           controls
           width="100%"
-          height="90vh"
+          height="85vh"
           style={{ borderRadius: '12px' }}
         />
       ) : (
         <p>Nenhum vídeo selecionado.</p>
       )}
       <Button
-        backgroundColor={theme.colors.white}
+        backgroundColor={backColor}
         onClick={() => navigate('/')}
+        borderRadius="2rem"
+        minHeight="4rem"
+        fontSize="2rem"
+        borderStyle="none"
       >
-        {' '}
-        Voltao ao Início
+        Voltar ao Início
       </Button>
     </Container>
   );

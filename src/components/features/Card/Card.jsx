@@ -11,7 +11,10 @@ export default function CardComponent({ data }) {
     <Card
       onClick={() =>
         navigate('/video', {
-          state: { video: data?.videoLink }, // passa o vídeo
+          state: {
+            video: data?.videoLink,
+            backgroundColor: data?.backgroundColor,
+          }, // passa o vídeo
         })
       }
       backgroundcolor={data?.backgroundColor}
