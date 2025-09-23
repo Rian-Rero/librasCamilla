@@ -33,6 +33,8 @@ export default function Video() {
         minHeight="4rem"
         fontSize="2rem"
         borderStyle="none"
+        hoverBackgroundColor={theme.colors.white}
+        hoverColor={theme.colors.black}
       >
         Voltar ao Início
       </Button>

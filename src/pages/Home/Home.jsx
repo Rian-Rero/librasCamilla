@@ -30,6 +30,7 @@ import {
   Care,
   Cumprimentos,
   Situations,
+  Exames,
 } from '../../assets/Videos';
 export default function Home() {
   const theme = useTheme();
@@ -66,7 +67,7 @@ export default function Home() {
       title: 'Exames e Precedimentos  ',
       description:
         'Conheça sinais que ajudam a explicar exames, consultas médicas e procedimentos hospitalares.',
-      videoLink: 'youtube.com',
+      videoLink: Exames,
       backgroundColor: theme.colors.orange,
       icon: CiMedicalClipboard,
     },
