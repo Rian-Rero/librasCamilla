@@ -50,7 +50,7 @@ export default function Home() {
       description:
         'Descubra sinais práticos para situações comuns de atendimento em diferentes contextos.',
       videoLink: Atendimento,
-      backgroundColor: theme.colors.welcomeGirl,
+      backgroundColor: theme.colors.orange,
       icon: CiStethoscope,
     },
     {
@@ -68,7 +68,7 @@ export default function Home() {
       description:
         'Conheça sinais que ajudam a explicar exames, consultas médicas e procedimentos hospitalares.',
       videoLink: Exames,
-      backgroundColor: theme.colors.orange,
+      backgroundColor: theme.colors.welcomeGirl,
       icon: CiMedicalClipboard,
     },
     {
