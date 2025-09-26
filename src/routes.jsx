@@ -27,8 +27,10 @@ const router = createBrowserRouter(
       <Route element={<HasFooterRoutes />}>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Home />} />{' '}
-          <Route path="video" element={<Video />} />
         </Route>
+      </Route>
+      <Route path="/" element={<AppLayout />}>
+        <Route path="video" element={<Video />} />
       </Route>
     </Route>,
   ),
