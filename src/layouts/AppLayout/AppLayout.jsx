@@ -4,7 +4,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { Container } from './Styles';
-import { AddToast } from '../../components/common';
+import { AddToast, Footer } from '../../components/common';
 
 export default function AppLayout() {
   // eslint-disable-next-line no-unused-vars
@@ -28,6 +28,7 @@ export default function AppLayout() {
   return (
     <Container>
       <Outlet />
+      <Footer />
       <AddToast />
     </Container>
   );
