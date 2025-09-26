@@ -27,7 +27,7 @@ export const Logo = styled.div`
 `;
 
 export const Names = styled.div`
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: #333;
   max-width: 600px;
   line-height: 1.4;
@@ -40,7 +40,7 @@ export const Names = styled.div`
 
 export const ExtraInfo = styled.div`
   margin-top: 1rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #555;
 
   p {

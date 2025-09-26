@@ -10,20 +10,25 @@ import {
 
 import { AppLayout } from './layouts';
 import { Home, Video } from './pages';
+import { Footer } from './components/common';
 
-// For the routes that need the user to be logged in
-function PrivateRoutes() {
-  const auth = true; // This need to be replaced with real authentication logic
-  const { pathname: from } = useLocation();
-  return !auth ? <Navigate to="/login" state={{ from }} /> : <Outlet />;
+function HasFooterRoutes() {
+  return (
+    <>
+      <Outlet />
+      <Footer />
+    </>
+  );
 }
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      <Route path="/" element={<AppLayout />}>
-        <Route index element={<Home />} />{' '}
-        <Route path="video" element={<Video />} />
+      <Route element={<HasFooterRoutes />}>
+        <Route path="/" element={<AppLayout />}>
+          <Route index element={<Home />} />{' '}
+          <Route path="video" element={<Video />} />
+        </Route>
       </Route>
     </Route>,
   ),

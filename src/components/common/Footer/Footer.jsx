@@ -6,7 +6,7 @@ export default function Footer() {
       <div>
         <Logo>Afya - Faculdade de Medicina de Itajubá</Logo>
         <Names>
-          <span>Camila Beatriz Carvalho Freitas¹;</span>
+          <span>Camilla Beatriz Carvalho Freitas¹;</span>
           <span>Evaldo de Souza Oliveira¹;</span>
           <span>Julia Caetano de Lima¹;</span>
           <span>Marina Lefol Nani Carvalho¹;</span>
