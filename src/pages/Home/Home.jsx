@@ -64,7 +64,7 @@ export default function Home() {
     },
     {
       id: 4,
-      title: 'Exames e Precedimentos  ',
+      title: 'Exames e Procedimentos  ',
       description:
         'Conheça sinais que ajudam a explicar exames, consultas médicas e procedimentos hospitalares.',
       videoLink: Exames,
