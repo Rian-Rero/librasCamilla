@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
+  display: flex;
+
   background: #f8f9fa;
   padding: 2rem 1rem;
   margin-top: 2rem;
   border-top: 3px solid #d72638; /* cor que lembra o logo */
 
-  display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
